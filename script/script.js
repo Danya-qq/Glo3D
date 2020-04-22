@@ -35,12 +35,19 @@ window.addEventListener('DOMContentLoaded', function(){
             timerSeconds.textContent = addZero(timer.seconds);
          }
          updateClock();
-        
-
+    
         let timer = getTimeRemaining();
         let idInterval = setInterval(updateClock, 1000);
-       
-           
+         
+        // if (timer.hours % 24 !== 0){
+        //    setInterval(function(){ 
+        //         let timer = getTimeRemaining();
+        //         timerHours.textContent = addZero(timer.hours) - 24;
+        //         timerMinutes.textContent = addZero(timer.minutes);
+        //         timerSeconds.textContent = addZero(timer.seconds);
+        //    }, 1000)
+        // }
+             
         if (timer.timeRemaining <0){
             timerHours.textContent = '00';
             timerMinutes.textContent = '00';
@@ -50,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function(){
          } 
     };
 
-    countTimer('23 april 2020');
+    countTimer('24 april 2020 22');
     
     
 
